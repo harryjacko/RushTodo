@@ -33,6 +33,7 @@ CORS_ALLOW_CREDENTIALS = True
 # Application definition
 
 INSTALLED_APPS = [
+	'quickstart.apps.QuickstartConfig',
 	'rest_framework',
 	'corsheaders',
 	'django.contrib.admin',

@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class User(models.Model):
 	user_name = models.CharField(max_length=20, unique=True)
-	password = models.CharField()
+	password = models.CharField(max_length=256)
 	created = models.DateTimeField(auto_now_add=True)
 	google_auth = models.BooleanField(default=False)
 
@@ -13,4 +13,4 @@ class TodoItem(models.Model):
 	remind_date = models.DateTimeField()
 	repeat_remind = models.BooleanField(default=False)
 	remind_location = models.CharField(max_length=300)
-	image = models.CharField()
+	image = models.CharField(max_length=128)
