@@ -10,4 +10,4 @@ class TodoItemSerializer(serializers.HyperlinkedModelSerializer):
 	user = serializers.PrimaryKeyRelatedField(many=False, read_only=True)
 	class Meta:
 		model = TodoItem
-		fields = ('id', 'name', 'remind_date', 'repeat_remind', 'remind_location', 'image')
+		fields = ('id', 'name', 'user', 'remind_date', 'repeat_remind', 'remind_location', 'image')

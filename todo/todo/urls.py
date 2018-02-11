@@ -18,5 +18,11 @@ from django.contrib import admin
 from quickstart import views
 
 urlpatterns = [
+	url(r'^users/$', views.UserList.as_view()),
+	url(r'^users/id=(?P<id>.*)/$', views.UserFromIdDetial.as_view()),
+	url(r'^users/(?P<user_name>.*)/$', views.UserDetail.as_view()),
+	url(r'^todoitems/$', views.TodoItemList.as_view()),
+	url(r'^todoitems/item_id=(?P<pk>.*)/$', views.TodoItemDetail.as_view()),
+	url(r'^todoitems/user=(?P<user>.*)/$', views.TodoItemFromUserList.as_view()),
 	url(r'^admin/', admin.site.urls),
 ]
