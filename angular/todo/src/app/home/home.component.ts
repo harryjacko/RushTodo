@@ -19,6 +19,10 @@ export class HomeComponent implements OnInit {
 		if (this.user == null){
 			this.router.navigate(['/index']);
 		}
+
+		
+
+
 	}
 
 }
