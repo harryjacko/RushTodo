@@ -21,10 +21,13 @@ body {
 
 .white-container{
 	position: relative;
-	width: 100%;
 	padding: 10px 20px 20px 20px;
 	background: white;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 	margin-bottom: 40px;
 	overflow: auto;
+}
+
+.full-width {
+	width: 100%!important;
 }
