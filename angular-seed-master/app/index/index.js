@@ -5,10 +5,10 @@ angular.module('myApp.index', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/index', {
 		templateUrl: 'index/index.html',
-		controller: 'indexCtrl'
+		controller: 'IndexCtrl'
 	});
 }])
 
-.controller('View1Ctrl', [function() {
+.controller('IndexCtrl', [function() {
 
 }]);
