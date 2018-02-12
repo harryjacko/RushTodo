@@ -14,6 +14,8 @@ import { MatButtonModule, MatToolbarModule, MatInputModule } from '@angular/mate
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 
+import {SessionService} from './session.service';
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -33,7 +35,7 @@ import { HomeComponent } from './home/home.component';
 		MatToolbarModule,
 		MatInputModule,
 	],
-	providers: [],
+	providers: [SessionService],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

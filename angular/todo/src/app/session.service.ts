@@ -1,10 +1,10 @@
 import {EventEmitter, Injectable} from '@angular/core';
-import {User} from "./user";
+// import {User} from "./user";
 
 @Injectable()
 export class SessionService {
 	emitData = new EventEmitter<string>();
-	private user: User;
+	private user = null;
 
 
 	constructor() { }
@@ -13,7 +13,7 @@ export class SessionService {
 		this.emitData.emit(username);
 	}
 
-	setUser(user: User){
+	setUser(user){
 		this.user = user;
 	}
 
