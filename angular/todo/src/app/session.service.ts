@@ -4,7 +4,8 @@ import {EventEmitter, Injectable} from '@angular/core';
 @Injectable()
 export class SessionService {
 	emitData = new EventEmitter<string>();
-	private user = null;
+	// private user = null;
+	private user = 1;
 
 
 	constructor() { }

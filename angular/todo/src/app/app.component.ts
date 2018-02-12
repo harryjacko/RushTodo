@@ -13,7 +13,6 @@ export class AppComponent {
 	constructor(private sessionService: SessionService, private router: Router) { }
 
 	logout(){
-		console.log("s")
 		this.sessionService.logout();
 		this.router.navigate(["/index"]);
 	}

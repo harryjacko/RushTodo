@@ -14,7 +14,7 @@ export class IndexComponent implements OnInit {
 	emailFormControl = new FormControl('', [
 		Validators.email,
 	]);
-	private baseUrl: string = "http://127.0.0.1:8000/"
+	private baseUrl: string = "http://127.0.0.1:8000/";
 	errorMessage = '';
 
 	constructor(private http: HttpClient, private sessionService: SessionService, private router: Router) { }
