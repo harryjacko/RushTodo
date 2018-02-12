@@ -10,12 +10,14 @@ import { AppRoutingModule } from './/app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatToolbarModule, MatInputModule } from '@angular/material';
 import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		IndexComponent,
-		RegisterComponent
+		RegisterComponent,
+		HomeComponent
 	],
 	imports: [
 		BrowserModule,
