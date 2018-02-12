@@ -1,25 +1,40 @@
-/* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+body {
+	background: rgb(242, 242, 242)!important;
+	margin: 0;
 }
 
-.menu:before {
-  content: "[";
+h3, p{
+	text-align: left;
 }
 
-.menu:after {
-  content: "]";
+md-content {
+	background: inherit;
 }
 
-.menu > li {
-  display: inline;
+.paper-shadow {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	z-index: 500;
+	position: relative;
 }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.main-container{
+	min-width: 320px;
+	max-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.white-container{
+	position: relative;
+	width: 100%;
+	padding: 10px 20px 20px 20px;
+	background: white;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	margin-bottom: 40px
+	overflow: auto;
+}
+
+
+.material-icons {
+	opacity: .7;
 }

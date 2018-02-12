@@ -22,17 +22,16 @@
 <body>
 
 	<md-content>
+		<md-toolbar class="paper-shadow">
+			<div class="md-toolbar-tools">
+				<md-truncate style="position: absolute; left: 10px; right: 170px; top: 13px; bottom: 13px;">ToDo</md-truncate>
 
-		<md-toolbar>
-				<div class="md-toolbar-tools">
-					<md-truncate style="position: absolute; left: 10px; right: 170px; top: 13px; bottom: 13px;">ToDo</md-truncate>
-
-					<span flex></span>
-					<md-button class="md-icon-button" aria-label="More">
-						<i class="material-icons">more_vert</i>
-					</md-button>
-				</div>
-			</md-toolbar>
+				<span flex></span>
+				<md-button class="md-icon-button" aria-label="More">
+					<i class="material-icons">more_vert</i>
+				</md-button>
+			</div>
+		</md-toolbar>
 	</md-content>
 
 	<!--[if lt IE 7]>
@@ -41,7 +40,7 @@
 
 	<div ng-view></div>
 
-	<div>Todo App: v<span app-version></span></div>
+	<!-- <div>Todo App: v<span app-version></span></div> -->
 
 	<!-- In production use:
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
