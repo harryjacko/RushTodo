@@ -19,9 +19,12 @@ export class IndexComponent implements OnInit {
 	}
 
 	loginUser(user_email : String, user_password : String){
-		this.http.get(this.baseUrl + "users/").subscribe(data => {
-			console.log(data);
-		});
+		if (user_email != ''){
+			this.http.get(this.baseUrl + "users/" + user_email).subscribe(data => {
+				console.log(data);
+			});
+		}
+
 	}
 
 }
