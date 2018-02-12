@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import {User} from "../user";
-import {Headers, Http, Response} from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
 	selector: 'app-register',
@@ -14,8 +14,9 @@ export class RegisterComponent implements OnInit {
 	]);
 
 	private baseUrl: string = "http://127.0.0.1:8000/users/"
+	errorMessage = '';
 
-	constructor(private http: Http) { }
+	constructor(private http: HttpClient) { }
 
 	ngOnInit() {
 	}
@@ -28,13 +29,13 @@ export class RegisterComponent implements OnInit {
 				created: null,
 			});
 
-			const headers = new Headers();
-			headers.append('Content-Type', 'application/json');
-			this.http.post(this.baseUrl, user, {
-				headers: headers
-			}).subscribe(
-
-			)
+		this.http.post(this.baseUrl, user).subscribe
+			(res => {
+				console.log(res);
+			},
+			err => {
+				this.errorMessage = "0";
+			});
 	}
 
 }

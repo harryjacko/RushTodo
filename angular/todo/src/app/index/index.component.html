@@ -1,7 +1,10 @@
 <div class="main-container">
 	<div class="white-container">
-		<form class="full-width">
 
+		<div class="error-space">
+			<p class="error-message" *ngIf="errorMessage=='0'">The entered user does not exist</p>
+		</div>
+		<form class="full-width">
 			<mat-form-field class="full-width">
 				<input matInput #user_email placeholder="Email" [formControl]="emailFormControl">
 				<mat-error *ngIf="emailFormControl.hasError('email')">
