@@ -25,7 +25,6 @@ export class IndexComponent implements OnInit {
 		if (user_email != ''){
 			this.http.get<User>(this.baseUrl + "users/" + user_email).subscribe
 				(data => {
-					console.log(data);
 					console.log(data.id)
 				},
 				err => {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import {Router} from "@angular/router";
 import {User} from "../user";
 import { HttpClient } from '@angular/common/http';
 
@@ -16,7 +17,7 @@ export class RegisterComponent implements OnInit {
 	private baseUrl: string = "http://127.0.0.1:8000/users/"
 	errorMessage = '';
 
-	constructor(private http: HttpClient) { }
+	constructor(private http: HttpClient, private router: Router) { }
 
 	ngOnInit() {
 	}
@@ -29,9 +30,10 @@ export class RegisterComponent implements OnInit {
 				created: null,
 			});
 
-		this.http.post(this.baseUrl, user).subscribe
+		this.http.post<User>(this.baseUrl, user).subscribe
 			(res => {
-				console.log(res);
+				console.log(res.id);
+				this.router.navigate(['/home'])
 			},
 			err => {
 				this.errorMessage = "0";
