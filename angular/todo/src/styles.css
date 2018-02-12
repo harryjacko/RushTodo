@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+	background: rgb(242, 242, 242)!important;
+	margin: 0;
+}
+
+.paper-shadow {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	z-index: 500;
+	position: relative;
+}
+
+.main-container{
+	min-width: 320px;
+	max-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.white-container{
+	position: relative;
+	width: 100%;
+	padding: 10px 20px 20px 20px;
+	background: white;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	margin-bottom: 40px;
+	overflow: auto;
+}

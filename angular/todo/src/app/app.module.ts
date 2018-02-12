@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { AppRoutingModule } from './/app-routing.module';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatToolbarModule } from '@angular/material';
 
 @NgModule({
 	declarations: [
@@ -14,7 +16,10 @@ import { AppRoutingModule } from './/app-routing.module';
 	],
 	imports: [
 		BrowserModule,
-		AppRoutingModule
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		MatButtonModule,
+		MatToolbarModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent]
