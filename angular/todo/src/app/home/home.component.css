@@ -10,3 +10,16 @@ mat-checkbox {
 	margin-right: 20px;
 	float: left;
 }
+
+p {
+	margin-bottom: 20px!important;
+}
+
+.error-space{
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.bottom-button {
+	margin-top: 20px;
+}

@@ -1,11 +1,11 @@
 <div class="main-container">
+	<div class="error-space">
+		<p class="error-message" *ngIf="errorMessage=='0'">Something went wrong getting your Todos, try refreshing the page</p>
+		<p *ngIf="errorMessage=='1'">You have nothing to do! <br>
+ Why not create a new Todo item..</p>
+		<p *ngIf="errorMessage==''">Todo Items</p>
+	</div>
 	<div class="white-container">
-		<div class="error-space">
-			<p class="error-message" *ngIf="errorMessage=='0'">Something went wrong getting your Todos, try refreshing the page</p>
-			<p *ngIf="errorMessage=='1'">You have nothing to do! Why not create a new Todo item..</p>
-		</div>
-
-		<p>Todo Items</p>
 		<!-- <ul>
 			<li *ngFor="let todoitem of todoList">
 				{{ todoitem.name }} {{ todoitem.completed }}
@@ -27,10 +27,8 @@
 				</button>
 		 </mat-list-item>
 		</mat-list>
+		<button mat-raised-button color="primary" class="bottom-button" routerLink="/create">Create Todo +</button>
 	</div>
 
-	<div class="white-container">
-		<button mat-raised-button color="primary" routerLink="/create">Create Todo +</button>
-	</div>
 
 </div>
