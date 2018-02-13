@@ -1,0 +1,12 @@
+mat-list-item {
+	border-bottom: solid 1px #ccc;
+}
+
+.todo-list-spacer {
+	flex: 1 1 auto;
+}
+
+mat-checkbox {
+	margin-right: 20px;
+	float: left;
+}

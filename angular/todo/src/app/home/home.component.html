@@ -1,3 +1,36 @@
-<p>
-  home works!
-</p>
+<div class="main-container">
+	<div class="white-container">
+		<div class="error-space">
+			<p class="error-message" *ngIf="errorMessage=='0'">Something went wrong getting your Todos, try refreshing the page</p>
+			<p *ngIf="errorMessage=='1'">You have nothing to do! Why not create a new Todo item..</p>
+		</div>
+
+		<p>Todo Items</p>
+		<!-- <ul>
+			<li *ngFor="let todoitem of todoList">
+				{{ todoitem.name }} {{ todoitem.completed }}
+			</li>
+		</ul> -->
+
+		<mat-list>
+		 <mat-list-item *ngFor="let todoitem of todoList">
+			 <div *ngIf="todoitem.completed == true">
+				 <mat-checkbox (click)="setFalse(todoitem.id)" checked="True"></mat-checkbox>
+			 </div>
+			 <div *ngIf="todoitem.completed == false">
+				 <mat-checkbox (click)="setTrue(todoitem.id)"></mat-checkbox>
+			 </div>
+				<p>{{ todoitem.name }}</p>
+				<span class="todo-list-spacer"></span>
+				<button mat-icon-button (click)="editTodo(todoitem.id)">
+					<i class="material-icons">mode_edit</i>
+				</button>
+		 </mat-list-item>
+		</mat-list>
+	</div>
+
+	<div class="white-container">
+		<button mat-raised-button color="primary" (click)="setTodoListData()">Refresh</button>
+	</div>
+
+</div>

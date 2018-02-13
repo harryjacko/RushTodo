@@ -24,20 +24,53 @@ export class HomeComponent implements OnInit {
 		if (this.user == null){
 			this.router.navigate(['/index']);
 		}
+		this.setTodoListData();
+	}
 
+	setTodoListData(){
 		this.http.get<JsonResponse>(this.baseUrl + "todoitems/user=" + this.user).subscribe
 			(data => {
 				this.todoList = data.results;
+				if (this.todoList.length == 0){
+					this.errorMessage = "1"
+				}
 				// for (var i = 0; i < data.results.length; i++){
 				// 	console.log(data.results[i].name)
 				// }
-
 			},
 			err => {
 				this.errorMessage = "0";
 			});
+	}
 
+	setTrue(id){
+		let todoPatch = <Object>({
+			completed: true
+		});
+		this.http.patch(this.baseUrl + "todoitems/item_id=" + id + "/", todoPatch).subscribe
+			(res => {
+				console.log(res);
+			},
+			err => {
+				console.log(err);
+			});
 
+		this.setTodoListData();
+	}
+
+	setFalse(id){
+		let todoPatch = <Object>({
+			completed: false
+		});
+		this.http.patch(this.baseUrl + "todoitems/item_id=" + id + "/", todoPatch).subscribe
+			(res => {
+				console.log(res);
+			},
+			err => {
+				console.log(err);
+			});
+
+		this.setTodoListData();
 	}
 
 }
