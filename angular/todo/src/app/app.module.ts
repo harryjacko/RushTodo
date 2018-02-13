@@ -18,13 +18,15 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 
 import {SessionService} from './session.service';
+import { CreateComponent } from './create/create.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		IndexComponent,
 		RegisterComponent,
-		HomeComponent
+		HomeComponent,
+		CreateComponent
 	],
 	imports: [
 		BrowserModule,
