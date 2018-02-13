@@ -1,3 +1,25 @@
-<p>
-  edit works!
-</p>
+<div class="main-container">
+<div class="white-container">
+
+	<div class="error-space">
+		<p class="error-message" *ngIf="errorMessage=='0'">Something went wrong.. try again</p>
+	</div>
+	<form class="full-width">
+		<mat-form-field class="full-width">
+			<input [(ngModel)]="todoDetails.name" name="name" #todo_name matInput maxlength="50" placeholder="Name/Description" required>
+			<mat-hint align="end">{{todo_name.value.length}} / 50</mat-hint>
+		</mat-form-field>
+
+		<mat-form-field class="full-width">
+			<input [(ngModel)]="todoDetails.remind_date" name="date"  #todo_date matInput placeholder="Remind date">
+		</mat-form-field>
+
+	<button type="submit" color="primary" mat-raised-button class="full-width" (click)="updateTodo(todo_name.value, todo_date.value)"> Update</button>
+	</form>
+
+	<button color="accent" mat-raised-button class="full-width" (click)="deleteTodo()"> Delete</button>
+
+	<button mat-raised-button class="full-width" routerLink="/home">Go back</button>
+</div>
+
+</div>

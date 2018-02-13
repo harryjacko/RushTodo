@@ -6,6 +6,7 @@ export class SessionService {
 	emitData = new EventEmitter<string>();
 	// private user = null;
 	private user = 1;
+	private todo = null;
 
 
 	constructor() { }
@@ -16,6 +17,14 @@ export class SessionService {
 
 	setUser(user){
 		this.user = user;
+	}
+
+	setTodoItem(todo){
+		this.todo = todo;
+	}
+
+	getTodoItem(){
+		return this.todo;
 	}
 
 	getUser(){

@@ -20,7 +20,9 @@
 			<input matInput #user_password2  placeholder="Repeat Password" value="" type="password">
 		</mat-form-field>
 
-		<button mat-raised-button (click)="registerUser(user_email.value, user_password.value, user_password2.value)">Register</button>
+		<button mat-raised-button color="accent" (click)="registerUser(user_email.value, user_password.value, user_password2.value)">Register</button>
+
+		<button mat-raised-button class="full-width" routerLink="/index">Go back</button>
 
 	</form>
 </div>

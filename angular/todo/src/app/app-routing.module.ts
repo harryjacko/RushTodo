@@ -4,14 +4,15 @@ import { IndexComponent } from './index/index.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { CreateComponent } from './create/create.component';
+import { EditComponent } from './edit/edit.component';
 
 const routes: Routes = [
 	{ path: '', redirectTo: '/index', pathMatch: 'full' },
 	{ path: 'index', component: IndexComponent },
 	{ path: 'register', component: RegisterComponent },
 	{ path: 'home', component: HomeComponent },
-	{ path: 'create', component: CreateComponent }
-
+	{ path: 'create', component: CreateComponent },
+	{ path: 'edit', component: EditComponent }
 ];
 
 @NgModule({

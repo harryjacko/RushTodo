@@ -43,6 +43,11 @@ export class HomeComponent implements OnInit {
 			});
 	}
 
+	editTodo(id){
+		this.sessionService.setTodoItem(id);
+		this.router.navigate(["/edit"]);
+	}
+
 	setTrue(id){
 		let todoPatch = <Object>({
 			completed: true

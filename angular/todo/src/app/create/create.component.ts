@@ -20,16 +20,6 @@ export class CreateComponent implements OnInit {
 	errorMessage = "";
 	private baseUrl: string = "http://127.0.0.1:8000/";
 
-	// todoDetails = {
-	// 	name: '',
-	// 	user: null,
-	// 	completed: false,
-	// 	remind_date: null,
-	// 	repeat_remind: false,
-	// 	remind_image: '',
-	// 	image: ''
-	// }
-
 	ngOnInit() {
 		this.user = this.sessionService.getUser();
 		if (this.user == null){
