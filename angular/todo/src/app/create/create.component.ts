@@ -15,6 +15,7 @@ import { NgForm } from "@angular/forms";
 export class CreateComponent implements OnInit {
 
 	constructor(private http: HttpClient, private sessionService: SessionService, private router: Router) { }
+	private todo_name;
 	user = null;
 	errorMessage = "";
 	private baseUrl: string = "http://127.0.0.1:8000/";

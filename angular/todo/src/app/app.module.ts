@@ -21,6 +21,7 @@ import { HomeComponent } from './home/home.component';
 
 import {SessionService} from './session.service';
 import { CreateComponent } from './create/create.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
 	declarations: [
@@ -28,7 +29,8 @@ import { CreateComponent } from './create/create.component';
 		IndexComponent,
 		RegisterComponent,
 		HomeComponent,
-		CreateComponent
+		CreateComponent,
+		EditComponent
 	],
 	imports: [
 		BrowserModule,
