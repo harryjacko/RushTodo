@@ -9,8 +9,20 @@ import {Router} from "@angular/router";
 })
 export class AppComponent {
 	title = 'Todo Application';
+	loggedIn = false;
 
-	constructor(private sessionService: SessionService, private router: Router) { }
+	constructor(private sessionService: SessionService, private router: Router) {
+		router.events.forEach((event) => {
+			this.loggedIn = false;
+			if (this.sessionService.getUser() != null){
+				this.loggedIn = true;
+			}
+
+		});
+	}
+
+	ngOnInit(){
+	}
 
 	logout(){
 		this.sessionService.logout();
