@@ -1,3 +1,20 @@
-<p>
-  create works!
-</p>
+<div class="main-container">
+<div class="white-container">
+
+	<div class="error-space">
+		<p class="error-message" *ngIf="errorMessage=='0'">Something went wrong.. try again</p>
+	</div>
+	<form class="full-width">
+		<mat-form-field class="full-width">
+			<input #todo_name matInput placeholder="Name/Description" required>
+		</mat-form-field>
+
+		<mat-form-field class="full-width">
+			<input #todo_date matInput placeholder="Remind date">
+		</mat-form-field>
+
+	<button type="submit" color="primary" mat-raised-button class="full-width" (click)="submitTodo(todo_name.value, todo_date.value)"> Submit</button>
+	</form>
+</div>
+
+</div>
