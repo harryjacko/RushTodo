@@ -10,7 +10,7 @@
 		</mat-form-field>
 
 		<mat-form-field class="full-width">
-			<input #todo_date matInput placeholder="Remind date">
+			<input type="datetime-local" #todo_date matInput placeholder="Remind date">
 		</mat-form-field>
 
 	<button type="submit" color="primary" mat-raised-button class="full-width" (click)="submitTodo(todo_name.value, todo_date.value)"> Submit</button>

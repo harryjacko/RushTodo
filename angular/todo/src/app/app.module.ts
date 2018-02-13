@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatToolbarModule, MatInputModule } from '@angular/material';
 import {MatListModule} from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
@@ -35,6 +37,7 @@ import { CreateComponent } from './create/create.component';
 		HttpModule,
 		FormsModule,
 		ReactiveFormsModule,
+		MatDatepickerModule,
 		BrowserAnimationsModule,
 		MatButtonModule,
 		MatCheckboxModule,

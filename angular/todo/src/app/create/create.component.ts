@@ -38,6 +38,7 @@ export class CreateComponent implements OnInit {
 
 	submitTodo(name, date){
 		// HAVE A FUNCTION THAT CHECKS ITS THE RIGHT FORMAT?
+		console.log(date);
 		if (date ==''){
 			date = null;
 		}
@@ -51,6 +52,14 @@ export class CreateComponent implements OnInit {
 			remind_location: '',
 			image: ''
 		});
+
+		this.http.post(this.baseUrl + "todoitems/", todo).subscribe
+			(res => {
+				this.router.navigate(['/home'])
+			},
+			err => {
+				this.errorMessage = "0";
+			});
 
 	}
 
