@@ -36,6 +36,7 @@ export class RegisterComponent implements OnInit {
 
 		this.http.post<User>(this.baseUrl, user).subscribe
 			(res => {
+				this.sessionService.setUser(res.id);
 				this.router.navigate(['/home'])
 			},
 			err => {
