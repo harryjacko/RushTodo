@@ -3,7 +3,6 @@ import {Router} from "@angular/router";
 import { HttpClient } from '@angular/common/http';
 import { User } from "../user";
 import { Todo } from "../todo";
-import { JsonResponse } from "../json.response";
 import { SessionService } from "../session.service";
 
 @Component({
@@ -28,9 +27,10 @@ export class HomeComponent implements OnInit {
 	}
 
 	setTodoListData(){
-		this.http.get<JsonResponse>(this.baseUrl + "todoitems/user=" + this.user).subscribe
+		this.http.get<Array<Todo>>(this.baseUrl + "todoitems/user=" + this.user).subscribe
 			(data => {
-				this.todoList = data.results;
+				this.todoList = data;
+				console.log(data);
 				if (this.todoList.length == 0){
 					this.errorMessage = "1"
 				}
@@ -48,9 +48,9 @@ export class HomeComponent implements OnInit {
 		this.router.navigate(["/edit"]);
 	}
 
-	setTrue(id){
+	toggleCompleted(id, checked){
 		let todoPatch = <Object>({
-			completed: true
+			completed: (!checked)
 		});
 		this.http.patch(this.baseUrl + "todoitems/item_id=" + id + "/", todoPatch).subscribe
 			(res => {
@@ -59,23 +59,6 @@ export class HomeComponent implements OnInit {
 			err => {
 				console.log(err);
 			});
-
-		this.setTodoListData();
-	}
-
-	setFalse(id){
-		let todoPatch = <Object>({
-			completed: false
-		});
-		this.http.patch(this.baseUrl + "todoitems/item_id=" + id + "/", todoPatch).subscribe
-			(res => {
-				console.log(res);
-			},
-			err => {
-				console.log(err);
-			});
-
-		this.setTodoListData();
 	}
 
 }

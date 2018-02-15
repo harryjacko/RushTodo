@@ -14,11 +14,14 @@
 
 		<mat-list>
 		 <mat-list-item *ngFor="let todoitem of todoList">
-			 <div *ngIf="todoitem.completed == true">
-				 <mat-checkbox (click)="setFalse(todoitem.id)" checked="True"></mat-checkbox>
+			 <!-- <div *ngIf="todoitem.completed == true">
+				 <mat-checkbox (click)="setFalse(todoitem.id, this)" [(ngModel)]=todoitem.completed></mat-checkbox>
 			 </div>
 			 <div *ngIf="todoitem.completed == false">
-				 <mat-checkbox (click)="setTrue(todoitem.id)"></mat-checkbox>
+				 <mat-checkbox (click)="setTrue(todoitem.id, this)"></mat-checkbox>
+			 </div> -->
+			 <div>
+				 <mat-checkbox (click)="toggleCompleted(todoitem.id, todoitem.completed)" [(ngModel)]=todoitem.completed></mat-checkbox>
 			 </div>
 				<p>{{ todoitem.name }}</p>
 				<span class="todo-list-spacer"></span>

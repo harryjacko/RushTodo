@@ -29,7 +29,6 @@ export class IndexComponent implements OnInit {
 		if (user_email != ''){
 			this.http.get<User>(this.baseUrl + "users/" + user_email).subscribe
 				(data => {
-					console.log(data.id)
 					this.sessionService.setUser(data.id);
 					this.router.navigate(['/home']);
 				},
