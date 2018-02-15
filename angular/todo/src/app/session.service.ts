@@ -5,7 +5,7 @@ import {EventEmitter, Injectable} from '@angular/core';
 export class SessionService {
 	emitData = new EventEmitter<string>();
 	// private user = null;
-	private user = 1;
+	private user = null;
 	private todo = null;
 
 
