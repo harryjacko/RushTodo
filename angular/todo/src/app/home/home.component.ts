@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
 	user = null;
 	errorMessage = "";
 	private todoList: Array<Todo>;
-	private baseUrl: string = "http://127.0.0.1:8000/";
+	private baseUrl: string = "http://ec2-18-216-140-140.us-east-2.compute.amazonaws.com:8000/";
 
 	ngOnInit() {
 		this.user = this.sessionService.getUser();

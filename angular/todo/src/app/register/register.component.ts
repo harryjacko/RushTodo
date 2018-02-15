@@ -15,7 +15,7 @@ export class RegisterComponent implements OnInit {
 		Validators.email,
 	]);
 
-	private baseUrl: string = "http://127.0.0.1:8000/users/"
+	private baseUrl: string = "http://ec2-18-216-140-140.us-east-2.compute.amazonaws.com:8000/users/";
 	errorMessage = '';
 
 	constructor(private http: HttpClient, private sessionService: SessionService, private router: Router) { }

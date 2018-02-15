@@ -15,7 +15,7 @@ export class EditComponent implements OnInit {
 	constructor(private http: HttpClient, private sessionService: SessionService, private router: Router) { }
 	todo = null;
 	user = null;
-	private baseUrl: string = "http://127.0.0.1:8000/";
+	private baseUrl: string = "http://ec2-18-216-140-140.us-east-2.compute.amazonaws.com:8000/";
 
 	todoDetails = {
 		id: null,
